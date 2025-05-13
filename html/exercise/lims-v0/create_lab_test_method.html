@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Lab Test Method - LIMS</title>
+</head>
+<body>
+    <header>
+        <h1>Create New Lab Test Method</h1>
+        <p><a href="index.html">Back to Home</a> | <a href="lab_test_method_list.html">Back to Lab Test Methods</a></p>
+    </header>
+
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab_test_method_list.html">Lab Test Methods</a></li>
+            <li><a href="create_lab_test_method.html">Create New Lab Test Method</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Create New Lab Test Method</h2>
+            <form action="lab_test_method_list.html" method="get">
+                <fieldset>
+                    <legend>Lab Test Method Information</legend>
+                    
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div>
+                        <label for="product-grade">Product Grade:</label>
+                        <input type="text" id="product-grade" name="product_grade" required>
+                    </div>
+                    
+                    <div>
+                        <label for="shelf-life-month">Shelf Life (Month):</label>
+                        <input type="number" id="shelf-life-month" name="shelf_life_month" required>
+                    </div>
+                    
+                    <div>
+                        <label for="created-by">Created By:</label>
+                        <input type="text" id="created-by" name="created_by" required>
+                    </div>
+                </fieldset>
+                
+                <div>
+                    <button type="submit">Create Lab Test Method</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Next Steps</h2>
+            <p>After creating a Lab Test Method, you will be able to add Test Components to it.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>LIMS v0 - Static HTML Prototype</p>
+    </footer>
+</body>
+</html>

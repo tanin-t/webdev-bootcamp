@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Lab Test Method - LIMS</title>
+</head>
+<body>
+    <header>
+        <h1>Edit Lab Test Method</h1>
+        <p><a href="index.html">Back to Home</a> | <a href="lab_test_method_list.html">Back to Lab Test Methods</a></p>
+    </header>
+
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab_test_method_list.html">Lab Test Methods</a></li>
+            <li><a href="create_lab_test_method.html">Create New Lab Test Method</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Edit Lab Test Method</h2>
+            <form action="lab_test_method_list.html" method="post">
+                <input type="hidden" name="id" value="1">
+                
+                <fieldset>
+                    <legend>Lab Test Method Information</legend>
+                    
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="Viscosity Test" required>
+                    </div>
+                    
+                    <div>
+                        <label for="product-grade">Product Grade:</label>
+                        <input type="text" id="product-grade" name="product_grade" value="A" required>
+                    </div>
+                    
+                    <div>
+                        <label for="shelf-life-month">Shelf Life (Month):</label>
+                        <input type="number" id="shelf-life-month" name="shelf_life_month" required>
+                    </div>
+                    
+                    <div>
+                        <label for="created-date">Created Date:</label>
+                        <input type="text" id="created-date" name="created_date" value="2023-01-15" readonly>
+                    </div>
+                    
+                    <div>
+                        <label for="created-by">Created By:</label>
+                        <input type="text" id="created-by" name="created_by" value="John Doe" readonly>
+                    </div>
+                    
+                    <div>
+                        <label for="updated-by">Updated By:</label>
+                        <input type="text" id="updated-by" name="updated_by" required>
+                    </div>
+                </fieldset>
+                
+                <div>
+                    <button type="submit">Update Lab Test Method</button>
+                    <button type="reset">Reset Changes</button>
+                </div>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Lab Test Components</h2>
+            <p><a href="create_lab_test_component.html?method_id=1">+ Add New Component</a></p>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Key</th>
+                        <th>For Calculation</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                        <th>Unit</th>
+                        <th>Show in Report</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Viscosity at 25°C</td>
+                        <td>visc_25c</td>
+                        <td>Yes</td>
+                        <td>10.0</td>
+                        <td>20.0</td>
+                        <td>cP</td>
+                        <td>Yes</td>
+                        <td>
+                            <a href="edit_lab_test_component.html?id=1">Edit</a> | 
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Viscosity at 40°C</td>
+                        <td>visc_40c</td>
+                        <td>Yes</td>
+                        <td>5.0</td>
+                        <td>15.0</td>
+                        <td>cP</td>
+                        <td>Yes</td>
+                        <td>
+                            <a href="edit_lab_test_component.html?id=2">Edit</a> | 
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>LIMS v0 - Static HTML Prototype</p>
+    </footer>
+</body>
+</html>

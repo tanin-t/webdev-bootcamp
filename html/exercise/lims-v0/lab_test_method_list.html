@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Test Methods - LIMS</title>
+</head>
+<body>
+    <header>
+        <h1>Lab Test Methods</h1>
+        <p><a href="index.html">Back to Home</a></p>
+    </header>
+
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab_test_method_list.html">Lab Test Methods</a></li>
+            <li><a href="create_lab_test_method.html">Create New Lab Test Method</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Search Lab Test Methods</h2>
+            <form action="#" method="get">
+                <div>
+                    <label for="search-name">Method Name:</label>
+                    <input type="text" id="search-name" name="name">
+                </div>
+                <div>
+                    <label for="search-product-grade">Product Grade:</label>
+                    <input type="text" id="search-product-grade" name="product_grade">
+                </div>
+                <div>
+                    <button type="submit">Search</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lab Test Methods List</h2>
+            <p><a href="create_lab_test_method.html">+ Create New Lab Test Method</a></p>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Product Grade</th>
+                        <th>Start By Month</th>
+                        <th>Created Date</th>
+                        <th>Created By</th>
+                        <th>Updated Date</th>
+                        <th>Updated By</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample data -->
+                    <tr>
+                        <td>1</td>
+                        <td>Viscosity Test</td>
+                        <td>A</td>
+                        <td>January</td>
+                        <td>2023-01-15</td>
+                        <td>John Doe</td>
+                        <td>2023-05-10</td>
+                        <td>Jane Smith</td>
+                        <td>
+                            <a href="edit_lab_test_method.html?id=1">Edit</a> | 
+                            <a href="#">Delete</a> |
+                            <a href="create_lab_test_component.html?method_id=1">Add Component</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Density Test</td>
+                        <td>B</td>
+                        <td>February</td>
+                        <td>2023-02-20</td>
+                        <td>John Doe</td>
+                        <td>2023-05-12</td>
+                        <td>Jane Smith</td>
+                        <td>
+                            <a href="edit_lab_test_method.html?id=2">Edit</a> | 
+                            <a href="#">Delete</a> |
+                            <a href="create_lab_test_component.html?method_id=2">Add Component</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>pH Test</td>
+                        <td>A</td>
+                        <td>March</td>
+                        <td>2023-03-05</td>
+                        <td>Jane Smith</td>
+                        <td>2023-05-15</td>
+                        <td>John Doe</td>
+                        <td>
+                            <a href="edit_lab_test_method.html?id=3">Edit</a> | 
+                            <a href="#">Delete</a> |
+                            <a href="create_lab_test_component.html?method_id=3">Add Component</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>LIMS v0 - Static HTML Prototype</p>
+    </footer>
+</body>
+</html>

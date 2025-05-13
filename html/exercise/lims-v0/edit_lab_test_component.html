@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Lab Test Component - LIMS</title>
+  </head>
+  <body>
+    <header>
+      <h1>Edit Lab Test Component</h1>
+      <p>
+        <a href="index.html">Back to Home</a> |
+        <a href="lab_test_method_list.html">Back to Lab Test Methods</a> |
+        <a href="edit_lab_test_method.html?id=1">Back to Test Method</a>
+      </p>
+    </header>
+
+    <nav>
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lab_test_method_list.html">Lab Test Methods</a></li>
+        <li>
+          <a href="create_lab_test_method.html">Create New Lab Test Method</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Edit Lab Test Component for Method: Viscosity Test</h2>
+        <form action="edit_lab_test_method.html?id=1" method="post">
+          <input type="hidden" name="id" value="1" />
+          <input type="hidden" name="lab_test_method_id" value="1" />
+
+          <fieldset>
+            <legend>Lab Test Component Information</legend>
+
+            <div>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value="Viscosity at 25°C"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="key">Key:</label>
+              <input
+                type="text"
+                id="key"
+                name="key"
+                value="visc_25c"
+                required
+              />
+              <small>Unique identifier for this component</small>
+            </div>
+
+            <div>
+              <label for="for-calculation">For Calculation:</label>
+              <select id="for-calculation" name="for_calculation">
+                <option value="yes" selected>Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="min">Minimum Value:</label>
+              <input
+                type="number"
+                id="min"
+                name="min"
+                step="0.01"
+                value="10.0"
+              />
+            </div>
+
+            <div>
+              <label for="max">Maximum Value:</label>
+              <input
+                type="number"
+                id="max"
+                name="max"
+                step="0.01"
+                value="20.0"
+              />
+            </div>
+
+            <div>
+              <label for="unit">Unit:</label>
+              <input type="text" id="unit" name="unit" value="cP" />
+            </div>
+
+            <div>
+              <label for="show-in-report">Show in Report:</label>
+              <select id="show-in-report" name="show_in_report">
+                <option value="yes" selected>Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="calculation">Calculation:</label>
+              <textarea
+                id="calculation"
+                name="calculation"
+                rows="4"
+                cols="50"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <div>
+            <button type="submit">Update Component</button>
+            <button type="reset">Reset Changes</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>LIMS v0 - Static HTML Prototype</p>
+    </footer>
+  </body>
+</html>
